@@ -1,24 +1,41 @@
-class node:
+class Node:
     def __init__(self, data = None, left = None, right = None):
         self.data = data
         self.left = left
         self.right = right
 
 class Tree:
+    
     def __init__(self):
-        self.root = None
+        self.root = none
+    
+    def new_node(self, data):
+        return node(data, none, none)
 
-    def newNode(self, data):
-        return node(data,None,None)
-
-    def TreeHeight(self, node):
-        if node == None:
+    def tree_height(self, node):
+        if node == none:
             return 0
         else:
-            Right_height = self.TreeHeight(node.right)
-            Left_height = self.TreeHeight(node.left)
+            right_height = self.tree_Height(node.right)
+            left_height = self.tree_Height(node.left)
             
-            if Right_height > Left_height:
-                return(Right_height+1)
+            if right_height > left_height:
+                return right_height + 1
             else:
-                return(Left_height+1)
+                return left_height + 1
+
+    def search(self, node, target):
+        if node == none: 
+            return 0
+        else:
+            if target == Node.data:
+                return 1
+            else:
+                if target < Node.data:
+                    return self.lookup(Node.left, target)
+
+    def amount(node):
+        if Node == none:
+            return 0
+        else:
+            return size(node.left) + size(node.right) + 1
